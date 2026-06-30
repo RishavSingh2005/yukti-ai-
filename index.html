@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukti AI - Hiring Score System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="panel">
+            <div class="page-actions">
+                <a href="login.html" data-login-link>Login</a>
+                <a href="signup.html" data-signup-link>Sign Up</a>
+                <button class="link-button" type="button" data-logout hidden>Logout</button>
+                <button class="theme-toggle" type="button" data-theme-toggle>Night</button>
+            </div>
+
+            <div class="brand">
+                <span class="brand-mark">Y</span>
+                <div>
+                    <h1>Yukti AI</h1>
+                    <p>Hiring Score System</p>
+                </div>
+            </div>
+
+            <form class="upload-form" data-score-form>
+                <label class="upload-box" for="resume">
+                    <span class="upload-icon">PDF</span>
+                    <span class="upload-title">Upload Resume</span>
+                    <span class="upload-help">Choose a valid PDF resume file</span>
+                </label>
+                <input id="resume" name="resume" type="file" accept="application/pdf">
+
+                <button type="submit">Calculate Score</button>
+            </form>
+
+            <section class="result-box" aria-live="polite">
+                <p class="result-label">Candidate Score</p>
+                <p class="score" data-score>--</p>
+                <p class="result-message" data-result-message>Upload a resume to begin.</p>
+                <div class="status-list compact">
+                    <span>Candidate Level</span>
+                    <strong data-candidate-level>Upload resume</strong>
+                </div>
+            </section>
+            <a class="panel-link" href="dashboard.html">Open Dashboard</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
