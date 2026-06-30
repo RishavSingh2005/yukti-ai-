@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yukti AI Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+    <aside class="dashboard-sidebar">
+        <div class="brand">
+            <span class="brand-mark">Y</span>
+            <div>
+                <h1>Yukti AI</h1>
+                <p>Hiring Panel</p>
+            </div>
+        </div>
+
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+            <a class="active" href="#home">Home</a>
+            <a href="#resume-scoring">Resume Scoring</a>
+            <a href="index.html">Simple Upload</a>
+            <a href="login.html" data-login-link>Login</a>
+            <a href="signup.html" data-signup-link>Sign Up</a>
+            <button class="nav-button" type="button" data-logout hidden>Logout</button>
+            <button class="theme-toggle nav-theme-toggle" type="button" data-theme-toggle>Night</button>
+            <a href="#about">About</a>
+        </nav>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header" id="home">
+            <div>
+                <p class="eyebrow">Smart Hiring Score System</p>
+                <h2>Welcome to Yukti AI</h2>
+                <p class="user-line" data-auth-user>Not signed in</p>
+            </div>
+            <a class="header-action" href="#resume-scoring">Upload Resume</a>
+        </header>
+
+        <section class="metrics-grid" aria-label="Dashboard metrics">
+            <article class="metric-card">
+                <p>Active Models</p>
+                <strong>1</strong>
+            </article>
+            <article class="metric-card">
+                <p>Resumes Processed</p>
+                <strong data-resumes-processed>0</strong>
+            </article>
+            <article class="metric-card">
+                <p>Accuracy</p>
+                <strong>92%</strong>
+            </article>
+        </section>
+
+        <section class="dashboard-section" id="resume-scoring">
+            <div class="section-heading">
+                <p class="eyebrow">Resume Scoring</p>
+                <h2>Analyze Candidate Resume</h2>
+            </div>
+
+            <div class="dashboard-grid">
+                <form class="dashboard-upload" data-score-form>
+                    <label class="upload-box" for="dashboard-resume">
+                        <span class="upload-icon">PDF</span>
+                        <span class="upload-title">Upload Resume</span>
+                        <span class="upload-help">Choose a valid PDF resume file</span>
+                    </label>
+                    <input id="dashboard-resume" name="resume" type="file" accept="application/pdf">
+                    <button type="submit">Calculate Score</button>
+                </form>
+
+                <section class="candidate-card" aria-live="polite">
+                    <p class="result-label">Candidate Score</p>
+                    <p class="score" data-score>--</p>
+                    <p class="result-message" data-result-message>Upload a resume to begin.</p>
+                    <div class="status-list">
+                        <span>Skills Match</span>
+                        <strong data-skills-match>Pending</strong>
+                    </div>
+                    <div class="status-list">
+                        <span>Candidate Level</span>
+                        <strong data-candidate-level>Upload resume</strong>
+                    </div>
+                    <div class="analysis-panel" aria-live="polite">
+                        <p class="result-label">Analysis Breakdown</p>
+                        <div class="analysis-chart" data-analysis-chart></div>
+                        <p class="analysis-summary" data-analysis-summary>Upload a resume to see how the score was built.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="dashboard-section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2>About Yukti AI</h2>
+            </div>
+            <p class="about-text">
+                Yukti AI is an intelligent resume scoring system that analyzes resumes
+                and provides a structured hiring score based on skills and content.
+            </p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
