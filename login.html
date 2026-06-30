@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Yukti AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <section class="panel auth-panel">
+            <button class="theme-toggle" type="button" data-theme-toggle>Night</button>
+
+            <div class="brand">
+                <span class="brand-mark">Y</span>
+                <div>
+                    <h1>Login</h1>
+                    <p>Access Yukti AI dashboard</p>
+                </div>
+            </div>
+
+            <form class="auth-form" data-auth-form="login">
+                <label for="login-username">Username</label>
+                <input id="login-username" name="username" type="text" autocomplete="username" required>
+
+                <label for="login-password">Password</label>
+                <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="result-message" data-auth-message>Enter your account details.</p>
+            <a class="panel-link" href="signup.html">Create new account</a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
